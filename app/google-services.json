@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "153901188348",
+    "firebase_url": "https://starfit-eceab-default-rtdb.firebaseio.com",
+    "project_id": "starfit-eceab",
+    "storage_bucket": "starfit-eceab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:153901188348:android:04f8ed0b61a77f21cb8379",
+        "android_client_info": {
+          "package_name": "com.example.starfit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "153901188348-r2kaf6887gev0brmd5ark8ufppg41pch.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTQem3bVGtNb7vfbB5HBt8600sutVV8Fw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "153901188348-r2kaf6887gev0brmd5ark8ufppg41pch.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:153901188348:android:eb7e7b4a28ffca5fcb8379",
+        "android_client_info": {
+          "package_name": "com.example.starfittwo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "153901188348-r2kaf6887gev0brmd5ark8ufppg41pch.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTQem3bVGtNb7vfbB5HBt8600sutVV8Fw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "153901188348-r2kaf6887gev0brmd5ark8ufppg41pch.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
