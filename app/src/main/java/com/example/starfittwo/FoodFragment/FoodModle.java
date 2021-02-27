@@ -5,6 +5,7 @@ public class FoodModle {
     private String Amount;
     private double YellowStar;
     private double RedStar;
+    private int numberOfFood;
 
     public int getNumberOfFood() {
         return numberOfFood;
@@ -14,7 +15,6 @@ public class FoodModle {
         this.numberOfFood = numberOfFood;
     }
 
-    private int numberOfFood;
 
 
     public FoodModle(String name, String amount) {

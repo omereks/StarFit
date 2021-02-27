@@ -17,7 +17,17 @@ import java.util.ArrayList;
 
 public class FoodViewAdapter extends RecyclerView.Adapter<FoodViewHolder> {
     MainActivity mainActivity;
+    ArrayList<ArrayList<FoodModle>> array;
     ArrayList<FoodModle> foodModleArrayList;
+    ArrayList<FoodModle> foodModleArrayListChoose = new ArrayList<FoodModle>();
+
+    public FoodViewAdapter(MainActivity mainActivity, ArrayList<FoodModle> foodModleArrayList, ArrayList<FoodModle> foodModleArrayListChoose) {
+        this.mainActivity = mainActivity;
+        this.foodModleArrayList = foodModleArrayList;
+        this.foodModleArrayListChoose = foodModleArrayListChoose;
+        //this.array.add(this.foodModleArrayList);
+        //this.array.add(this.foodModleArrayListChoose);
+    }
 
     public FoodViewAdapter(MainActivity mainActivity, ArrayList<FoodModle> foodModleArrayList) {
         this.mainActivity = mainActivity;
@@ -41,6 +51,9 @@ public class FoodViewAdapter extends RecyclerView.Adapter<FoodViewHolder> {
         holder.getAdd_button().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (foodModleArrayList.get(position).getNumberOfFood() == 0){
+                    foodModleArrayList.add(foodModleArrayList.get(position));
+                }
                 foodModleArrayList.get(position).setNumberOfFood(foodModleArrayList.get(position).getNumberOfFood()+1);
                 int num = foodModleArrayList.get(position).getNumberOfFood();
                 holder.getNumber_of_food().setText(num + "");
@@ -50,7 +63,10 @@ public class FoodViewAdapter extends RecyclerView.Adapter<FoodViewHolder> {
         holder.getRemove_button().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (foodModleArrayList.get(position).getNumberOfFood()!=0) {
+                if (foodModleArrayList.get(position).getNumberOfFood() == 1) {
+                    foodModleArrayListChoose.remove(foodModleArrayList.get(position));
+                }
+                if (foodModleArrayList.get(position).getNumberOfFood() != 0) {
                     foodModleArrayList.get(position).setNumberOfFood(foodModleArrayList.get(position).getNumberOfFood() - 1);
                     int num = foodModleArrayList.get(position).getNumberOfFood();
                     holder.getNumber_of_food().setText(num + "");
@@ -58,30 +74,20 @@ public class FoodViewAdapter extends RecyclerView.Adapter<FoodViewHolder> {
             }
         });
 
-
-
-            //////here i stoped
-
         //yellow star
-
-        holder.getRatingBar().setNumStars(4);
-
-        if (foodModleArrayList.get(position).getYellowStar()>0){
-            //Button b = new Button(this.mainActivity);
-           // holder.getLinearLayoutYellow().addView(b);
-        }
-
-
+        holder.getYellow_ratingBar().setRating((float)foodModleArrayList.get(position).getYellowStar());
+        holder.getRed_ratingBar().setRating((float)foodModleArrayList.get(position).getRedStar());
 
     }
 
-    public void addView(LinearLayout layout,ImageView img, int width, int high) {
-        Button b = new Button(this.mainActivity);
-        layout.addView(b);
-    }
 
     @Override
     public int getItemCount() {
         return foodModleArrayList.size();
+    }
+
+    public void filterList(ArrayList<FoodModle> filterList){
+        foodModleArrayList = filterList;
+        notifyDataSetChanged();
     }
 }

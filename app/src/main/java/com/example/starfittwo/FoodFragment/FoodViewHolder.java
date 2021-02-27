@@ -18,15 +18,25 @@ public class FoodViewHolder extends RecyclerView.ViewHolder{
     private ImageView remove_button;
     private TextView number_of_food;
     private ImageView yellow_star_img;
-    private LinearLayout linearLayoutYellow;
-    private RatingBar ratingBar;
 
-    public RatingBar getRatingBar() {
-        return ratingBar;
+    public RatingBar getRed_ratingBar() {
+        return red_ratingBar;
     }
 
-    public void setRatingBar(RatingBar ratingBar) {
-        this.ratingBar = ratingBar;
+    public void setRed_ratingBar(RatingBar red_ratingBar) {
+        this.red_ratingBar = red_ratingBar;
+    }
+
+    private LinearLayout linearLayoutYellow;
+    private RatingBar yellow_ratingBar;
+    private RatingBar red_ratingBar;
+
+    public RatingBar getYellow_ratingBar() {
+        return yellow_ratingBar;
+    }
+
+    public void setYellow_ratingBar(RatingBar yellow_ratingBar) {
+        this.yellow_ratingBar = yellow_ratingBar;
     }
 
     public LinearLayout getLinearLayoutYellow() {
@@ -77,8 +87,8 @@ public class FoodViewHolder extends RecyclerView.ViewHolder{
         remove_button =  itemView.findViewById(R.id.removeButton);
         number_of_food = itemView.findViewById(R.id.numberOfFood);
         linearLayoutYellow = itemView.findViewById(R.id.layoutYellowStar);
-        yellow_star_img = itemView.findViewById(R.id.yellowStarImg);
-        ratingBar = itemView.findViewById(R.id.ratingBar);
+        yellow_ratingBar = itemView.findViewById(R.id.YellowStarRating);
+        red_ratingBar = itemView.findViewById(R.id.redStarRating);
     }
 
     public TextView getList_food_name() {
