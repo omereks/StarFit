@@ -1,5 +1,6 @@
 package com.example.starfittwo.FoodFragment;
 
+import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,12 +17,13 @@ import com.example.starfittwo.R;
 import java.util.ArrayList;
 
 public class FoodViewAdapter extends RecyclerView.Adapter<FoodViewHolder> {
-    MainActivity mainActivity;
+    //Activity activity;
+    Activity mainActivity;
     ArrayList<ArrayList<FoodModle>> array;
     ArrayList<FoodModle> foodModleArrayList;
     ArrayList<FoodModle> foodModleArrayListChoose = new ArrayList<FoodModle>();
 
-    public FoodViewAdapter(MainActivity mainActivity, ArrayList<FoodModle> foodModleArrayList, ArrayList<FoodModle> foodModleArrayListChoose) {
+    public FoodViewAdapter(Activity mainActivity, ArrayList<FoodModle> foodModleArrayList, ArrayList<FoodModle> foodModleArrayListChoose) {
         this.mainActivity = mainActivity;
         this.foodModleArrayList = foodModleArrayList;
         this.foodModleArrayListChoose = foodModleArrayListChoose;
@@ -29,7 +31,7 @@ public class FoodViewAdapter extends RecyclerView.Adapter<FoodViewHolder> {
         //this.array.add(this.foodModleArrayListChoose);
     }
 
-    public FoodViewAdapter(MainActivity mainActivity, ArrayList<FoodModle> foodModleArrayList) {
+    public FoodViewAdapter(Activity mainActivity, ArrayList<FoodModle> foodModleArrayList) {
         this.mainActivity = mainActivity;
         this.foodModleArrayList = foodModleArrayList;
     }
