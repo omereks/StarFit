@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">StarFitTwo</string>
+    <string name="title_activity_main_page_tab">MainPageTab</string>
+    <string name="tab_text_1">תאריך</string>
+    <string name="tab_text_2">משקל</string>
+    <string name="tab_text_3">הגדרות</string>
 </resources>

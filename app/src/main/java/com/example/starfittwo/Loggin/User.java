@@ -3,6 +3,25 @@ package com.example.starfittwo.Loggin;
 public class User {
     private String name;
     private String email;
+    private int YellowStarAllowed = 10;
+
+    public int getYellowStarAllowed() {
+        return YellowStarAllowed;
+    }
+
+    public void setYellowStarAllowed(int yellowStarAllowed) {
+        YellowStarAllowed = yellowStarAllowed;
+    }
+
+    public int getRedStarAllowed() {
+        return RedStarAllowed;
+    }
+
+    public void setRedStarAllowed(int redStarAllowed) {
+        RedStarAllowed = redStarAllowed;
+    }
+
+    private int RedStarAllowed = 10;
 
     public String getName() {
         return name;
